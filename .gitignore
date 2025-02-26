@@ -1,0 +1,11 @@
+
+/pages/__pycache__
+/setup/__pycache__
+/data/__pycache__
+.DS_Store
+
+# Ignore everything in the log/ folder
+log/*
+# Except these two specific files
+!log/default_ad_click_log.log
+!log/default_terminal_log.log
