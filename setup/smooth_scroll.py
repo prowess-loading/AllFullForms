@@ -457,3 +457,16 @@ class SmoothScroll:
             scrolling_up, toggle_once = self._toggle_scroll_direction(
                 scrolling_up, toggle_once)
             self._random_pause()
+
+    def button_click(self, by=By.CSS_SELECTOR):
+
+        with open('data/page_locators.json', 'r') as f:
+            self.locators = json.load(f)
+        self.driver_quit = False
+
+        all_buttons = self.driver.find_elements(
+            by, self.locators["buttons"])
+        target_element = random.choice(all_buttons)
+
+        target_element.click()
+        time.sleep(random.randint(1, 3))

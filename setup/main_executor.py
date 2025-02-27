@@ -54,10 +54,10 @@ class MainExecutor:
             "agePage": 0.3,
             "genderPage": 0.2
         }
-        # target_page = random.choices(
-        #     list(weights.keys()), weights=list(weights.values()), k=1)[0]
+        target_page = random.choices(
+            list(weights.keys()), weights=list(weights.values()), k=1)[0]
 
-        target_page = "loanAmountPage"
+        # target_page = "agePage"
 
         print(f"Final page - {target_page} - Ad Click - {click_ad}")
 
